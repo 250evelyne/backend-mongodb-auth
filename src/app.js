@@ -27,6 +27,8 @@ app.post("/test", (req, res) => {
 app.use("/auth", authRoutes);
 
 
-app.listen(5000, ()=>{
-    console.log("Server is running...");
-});
+// app.listen(5000, ()=>{
+//     console.log("Server is running...");
+// });
+
+module.exports = app;
