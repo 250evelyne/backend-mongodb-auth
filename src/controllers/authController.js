@@ -1,9 +1,6 @@
 const User = require("../models/User");
 const bcrypt = require("bcrypt");
 
-const User = require("../models/User");
-const bcrypt = require("bcrypt");
-
 const register = async (req, res) => {
     try{
         console.log(req.body);
@@ -81,19 +78,3 @@ const login = async (req, res) => {
                     name: user.name,
                     email: user.email,
                     createdAt: user.createdAt,
-                    updatedAt: user.updatedAt
-                }
-            }
-        });
-    } catch (error) {
-        console.log(error);
-        return res.status(500).json({
-            message: "Error while logging in!"
-        });
-    }
-};
-
-module.exports = { register, login };
-
-
-module.exports = { register };
